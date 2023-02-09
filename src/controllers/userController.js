@@ -71,7 +71,8 @@ exports.updateUser = async (req, res) => {
 	  const user = await User.findByPk(id);
 	  if (!user) {
 		return res.status(404).send({ message: "User does not exist" });
-	  }  
+	  }
+	    
 	  await user.update({
 		firstName: firstName,
 		lastName: lastName,
